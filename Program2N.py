@@ -6,19 +6,18 @@
 print("Vien Angelo Bernales / BSCOE 1-1 \n")
 #use a function and return multiple values
 def AppleOrange():
-    AppleF = (input("How many apple you want to buy? "))
-    OrangeF = (input("How many orange you want to buy? "))
+    AppleF = int(input("How many apple you want to buy? "))
+    OrangeF = int(input("How many orange you want to buy? "))
     return AppleF, OrangeF
 
-def Calculate(AppleQ, OrangeQ):
-    Aoutcome = AppleQ * 20
-    Ooutcome = OrangeQ * 25
-    return Aoutcome, Ooutcome
+def Calculate():
+    total = (AppleQ * 20) + (OrangeQ * 25)
+    return total
 
-def DisplayQ(Apple1, Orange1):
-    print(f"The total amount is {Apple1 + Orange1}.")
+def DisplayQ(price1):
+    print(f"The total amount is {price}.")
 
 
 AppleQ, OrangeQ = AppleOrange()
-APrice, Oprice = Calculate(AppleQ, OrangeQ)
-DisplayQ(APrice, Oprice)
+price = Calculate()
+DisplayQ(price)
