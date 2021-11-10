@@ -1,16 +1,24 @@
-def FirstGroup():
-    ApplesFunc = int(input ("Enter the quantity of apples that you want to buy: "))
-    OrangesFunc = int(input ("Enter the quantity of oranges that you want to buy: "))
-    return ApplesFunc, OrangesFunc
+# Create a program that will ask how many apples and oranges you want to buy.
+# Display the total amount you need to pay if apple price is 20 pesos and orange is 25.
+# Display the output in the following format.
+# The total amount is ______.
 
-def SecondGroup(Apples, Oranges):
-    PriceApplesFunc = Apples * 20
-    PriceOrangesFunc = Oranges * 25
-    return  PriceApplesFunc, PriceOrangesFunc
+print("Vien Angelo Bernales / BSCOE 1-1 \n")
+#use a function and return multiple values
+def AppleOrange():
+    AppleF = (input("How many apple you want to buy? "))
+    OrangeF = (input("How many orange you want to buy? "))
+    return AppleF, OrangeF
 
-def FinalOutput(PriceOfApple1, PriceOfOrange1):
-    print (f'The total amount is {PriceOfApple1 + PriceOfOrange1}')
+def Calculate(AppleQ, OrangeQ):
+    Aoutcome = AppleQ * 20
+    Ooutcome = OrangeQ * 25
+    return Aoutcome, Ooutcome
 
-Apples, Oranges = FirstGroup()
-PriceOfApple, PriceOfOrange = SecondGroup(Apples, Oranges)
-FinalOutput (PriceOfApple, PriceOfOrange)
+def DisplayQ(Apple1, Orange1):
+    print(f"The total amount is {Apple1 + Orange1}.")
+
+
+AppleQ, OrangeQ = AppleOrange()
+APrice, Oprice = Calculate(AppleQ, OrangeQ)
+DisplayQ(APrice, Oprice)
