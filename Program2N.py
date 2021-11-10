@@ -10,14 +10,15 @@ def AppleOrange():
     OrangeF = int(input("How many orange you want to buy? "))
     return AppleF, OrangeF
 
-def Calculate():
-    total = (AppleQ * 20) + (OrangeQ * 25)
-    return total
+def Calculate(Applef, Orangef):
+    Aoutcome = AppleQ * 20
+    Ooutcome = OrangeQ * 25
+    return Aoutcome, Ooutcome
 
-def DisplayQ(price1):
-    print(f"The total amount is {price}.")
+def DisplayQ(Apple1, Orange1):
+    print(f"The total amount is {Apple1 + Orange1}.")
 
 
 AppleQ, OrangeQ = AppleOrange()
-price = Calculate()
-DisplayQ(price)
+APrice, Oprice = Calculate(AppleQ, OrangeQ)
+DisplayQ(APrice, Oprice)
