@@ -12,12 +12,14 @@ def YourMoney():
     price = int(input("Enter the price of the apple: "))
     return fee, price
 
-def getTotal(moneyQ, appleQ, total):
+def getTotal(moneyQ, appleQ):
     TotalApples = int(moneyQ / appleQ)
-    amount = int(appleQ * total)
-    total = int(moneyQ - total)
+    amount = int(moneyQ % appleQ)
     return TotalApples, amount
 
 def getOutput(affordable, changeF):
     print(f"You can buy {affordable} apples and your change is {changeF} pesos.")
 
+moneyF, apple = YourMoney()
+Tamount, change = getTotal(moneyF, apple)
+getOutput(Tamount, change)
