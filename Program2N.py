@@ -3,15 +3,20 @@
 # Display the output in the following format.
 # The total amount is ______.
 
+print("Vien Angelo Bernales / BSCOE 1-1 \n")
 #use a function and return multiple values
 def AppleOrange():
-    AppleF = ("How many apple you want to buy? ")
-    OrangeF = ("How many orange you want to buy? ")
+    AppleF = int(input("How many apple you want to buy? "))
+    OrangeF = int(input("How many orange you want to buy? "))
     return AppleF, OrangeF
 
 def Calculate():
-    apple = 20
-    orange = 25
-    outcome = (apple)
+    outcome = (AppleQ * 20) + (OrangeQ * 25)
+
+def DisplayQ(PriceF):
+    print(f"The total amount is {PriceF}.")
+
 
 AppleQ, OrangeQ = AppleOrange()
+Price = Calculate()
+DisplayQ(AppleQ, OrangeQ, Price)
